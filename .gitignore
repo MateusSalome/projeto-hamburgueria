@@ -1,0 +1,22 @@
+# Desconsiderar arquivos do sistema operacional
+/.idea/
+.vscode/
+
+# Desconsiderar arquivos gerados
+/build/
+/dist/
+
+# Desconsiderar arquivos de cache
+npm-debug.log*
+yarn-error.log*
+
+# Desconsiderar dependências
+node_modules/
+
+# Desconsiderar arquivos de configuração locais
+.env*
+config.local.js
+
+# Desconsiderar outros arquivos
+*.swp
+*~

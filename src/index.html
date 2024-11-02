@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hamburgueria - Salomé</title>
+    <link href="./output.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&family=Rubik+Wet+Paint&display=swap"
+      rel="stylesheet"
+    />
+    <script src="script.js"></script>
+  </head>
+
+  <body class="font-[Poppins]">
+    <header class="border-b border-slate-950">
+      <nav
+        class="flex flex-col items-center lg:flex lg:flex-row lg:w-[92%] lg:justify-evenly lg:items-center"
+      >
+        <div class="flex gap-6 items-center">
+          <h1 class="font-rubik-wet-paint text-4xl">SALOMÉ</h1>
+          <img class="w-24" src="../src/assets/images/logo.png" alt="mobile-icon" />
+          <button id="mobile-menu" class="hover:scale-110">
+            <img class="w-16 h-16 sm:hidden"src="../src/assets/images/mobile-icon.jpg" alt="" >
+          </button>
+        </div>
+        <div
+          class="flex items-center gap-8 mb-5 lg:mb-0 text-2xl max-sm:text-base max-sm:gap-4 max-sm:hidden">
+          <a class="hover:scale-110" href="#burguers-area">Hambúrguers</a>
+          <a class="hover:scale-110" href="#drinks-area">Bebidas</a>
+          <a class="hover:scale-110" href="#sobre">Sobre</a>
+          <a class="hover:scale-110" href="#contato">Contato</a>
+        </div>
+        <div class="flex gap-6 mb-5 lg:mb-0 max-sm:hidden">
+          <button
+            class="w-24 bg-black text-white rounded hover:bg-white hover:text-black hover:border-black hover:border hover:scale-110 max-sm:w-16 max-sm:text-sm"
+          >
+            Entrar
+          </button>
+          <button class="hover:scale-110 openCartBtn">
+            <img
+              class="w-7 h-7"
+              src="../src/assets/images/carrinho-compras.jpg"
+              alt=""
+            />
+          </button>
+        </div>
+
+        <!--Configuração para menu toggle-->
+
+        <div id="menu" class="flex-col gap-2 hidden">
+            <ul class="flex flex-col gap-2">
+                <a class="hover:scale-110 mt-2 transitio" href="#burguers-area">Hambúrguers</a>
+                <a class="hover:scale-110" href="#drinks-area">Bebidas</a>
+                <a class="hover:scale-110" href="#sobre">Sobre</a>
+                <a class="hover:scale-110" href="#contato">Contato</a>
+            </ul>
+            <div class="flex flex-col gap-2">
+                <button
+                class="w-24 bg-black text-white rounded hover:bg-white hover:text-black hover:border-black hover:border hover:scale-110">           
+                <a href="">Entrar</a>
+            </button>
+            <button class="w-24 bg-black text-white rounded hover:bg-white hover:text-black hover:border-black hover:border hover:scale-110 mb-2 openCartBtnToggle">
+                Carrinho
+            </button>
+            </div>
+        </div>
+      </nav>
+
+      <!--Fim do menu toggle-->
+
+    </header>  
+
+    <!--Modal do Carrinho-->
+
+    <div class="w-[60%] max-sm:w-[80%] mx-auto mt-5">
+        <div id="cartModal" class="cart-modal bg-white border border-black hidden">
+            <div class="cart-content flex flex-col justify-center">
+                <div class="flex mx-auto mr-5 ml-5 justify-between">
+                    <div class="flex ">
+                        <p class="text-2xl text-center mt-2">Carrinho de Compras</p>
+                    </div>
+                    <button class="close-cart text-4xl text-red-700 mt-2">&times;</button>
+                </div>
+                <div id="cartItems" class="mx-auto mr-5 ml-5"></div>
+                <div class="flex flex-col text-center">
+                    <p class="font-bold">Total: R$ <span id="cartTotal">0.00</span></p>
+                    <button id="checkoutBtn" class="bg-black text-white w-48 mb-2 mx-auto rounded">Finalizar Compra</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <main class="w-[90%] mx-auto">
+      <div id="burguers-area" class="flex items-center justify-center mt-5 text-center">
+        <p class="mb-5 text-3xl max-sm:text-2xl">Nossos Hambúrguers</p>
+      </div>
+
+      <div class="burguer-area lg:grid lg:grid-cols-3 lg:gap-4"></div>
+    
+
+    <div id="drinks-area" class="flex items-center justify-center mt-5 text-center">
+      <p class="mb-5 text-3xl max-sm:text-2xl">Nossas Bebidas</p>
+    </div>
+    <div>
+      <div class="drinks-area lg:grid lg:grid-cols-3 lg:gap-4"></div>
+    </div>
+    </main>
+
+    <div id="sobre"
+      class="flex w-[90%] mx-auto border mb-5 border-black rounded max-md:flex-wrap max-xl:flex-col"
+    >
+      <div class="mr-10 max-2xl:mr-0">
+        <img
+          class=""
+          src="../src/assets/images/Hamburgueria.jpg"
+          alt="hamburgueria"
+        />
+      </div>
+      <div class="flex flex-col px-6 py-6 items-center justify-evenly">
+        <div class="max-lg:text-center">
+          <h1 class="text-2xl mb-9 font-bold max-sm:text-xl">Sobre nós</h1>
+          <article class="text-xl max-sm:text-sm">
+            Casa do hambúrguer é mais do que um simples restaurante. É um lugar
+            onde a paixão pela boa comida se encontra com a tradição artesanal.
+            Cada hambúrguer é preparado com ingredientes frescos e selecionados,
+            moídos na hora e grelhados no ponto certo. Venha saborear o
+            verdadeiro sabor de um hambúrguer feito com amor
+          </article>
+        </div>
+        <div class="flex items-center max-sm:flex-col">
+          <img class="w-40" src="../src/assets/images/certificado.jpg" alt="" />
+          <p class="text-center max-sm:text-sm">
+            Lugar certificado para que tenha certeza de ter boas comidas, boas
+            companhias, boas conversas e o melhor de tudo, boas lembranças!
+          </p>
+        </div>
+      </div>
+    </div>
+    <aside id="contato" class="flex w-[90%] mx-auto border rounded border-black mb-5">
+        
+      <div class="mr-10 max-2xl:mr-0 max-xl:hidden">
+        <img class="border-r border-black w-64" src="../src/assets/images/mapa.jpg" alt="" />
+      </div>
+      <div class="flex items-center text-center mx-auto max-xl:mb-5">
+        <div class="">
+        <p class="text-2xl mb-9 font-bold max-sm:text-xl max-xl:mt-5">Onde nos encontrar</p>
+        <div class="text-left max-xl:text-center">
+        <p>Número de contato: (99) 9 9999-9999</p>
+        <p>
+          Endereço: Avenida do hambúrguer, 123, Bom preço,
+          12345-678 - Belo Horizonte
+        </p>
+        </div>
+      </div>
+      </div>
+    </aside>
+    <footer class="bg-black flex items-center justify-center gap-16 max-sm:gap-8">
+      <img class="w-40" src="../src/assets/images/logo-white.png" alt="" />
+      <div>
+        <p class="text-white max-sm:text-center">Site feito para portifólio por @Mateus Salomé</p>
+      </div>
+    </footer>
+  </body>
+  <script>
+
+const links = document.querySelectorAll('a[href^="#"]');
+
+links.forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    const targetId = link.getAttribute('href').substring(1);   
+
+    const targetElement = document.getElementById(targetId);   
+
+
+    // Calcular o ponto central da seção
+    const sectionTop = targetElement.offsetTop;
+    const sectionHeight = targetElement.offsetHeight;
+    const windowHeight = window.innerHeight;
+    const scrollTo = sectionTop - (windowHeight - sectionHeight) / 2;
+
+    window.scrollTo({
+      top: scrollTo,
+      behavior: 'smooth'
+    });
+  });
+});
+
+    const btn = document.querySelector('#mobile-menu')
+    const menu = document.querySelector('#menu')
+
+    btn.addEventListener('click', () => {
+        menu.classList.toggle("hidden")
+    })
+
+    // Carrinho de compras
+let cart = [];
+
+const openCart = document.querySelector('.openCartBtn')
+const cartModal = document.querySelector('.cart-modal')
+const closeCart = document.querySelector('.close-cart')
+const openCart2 = document.querySelector('.openCartBtnToggle')
+
+openCart.addEventListener('click',() =>{
+    cartModal.classList.toggle("hidden")
+})
+
+closeCart.addEventListener('click', () => {
+    cartModal.classList.toggle("hidden")
+})
+
+openCart2.addEventListener('click', () => {
+    cartModal.classList.toggle("hidden")
+})
+
+
+// Função para adicionar itens ao carrinho
+function addToCart(itemId) {
+    const item = [...burguerJson, ...drinksJson].find(product => product.id === itemId);
+    if (!item) return;
+
+    const existingItem = cart.find(cartItem => cartItem.id === item.id);
+    if (existingItem) {
+        existingItem.quantity += 0;
+    } else {
+        cart.push({...item, quantity: 1});
+    }
+    updateCart();
+}
+
+// Atualizar exibição do carrinho
+function updateCart() {
+    const cartItemsContainer = document.getElementById('cartItems');
+    
+    // Remove os elementos anteriores do contêiner de itens do carrinho
+    while (cartItemsContainer.firstChild) {
+        cartItemsContainer.removeChild(cartItemsContainer.firstChild);
+    }
+
+    let total = 0;
+
+    cart.forEach(item => {
+        const itemTotal = item.price * item.quantity;
+        total += itemTotal;
+
+        // Criação dos elementos para o item do carrinho
+        const cartItem = document.createElement('div');
+        cartItem.className = 'cart-item flex w-[100%] border border-black px-4 py-4 mb-2';
+
+        const img = document.createElement('img');
+        img.src = item.img;
+        img.alt = item.name;
+        img.className = 'h-24 mr-2'
+
+        const details = document.createElement('div');
+
+        const name = document.createElement('h4');
+        name.textContent = item.name;
+        name.className = 'font-semibold'
+
+        const description = document.createElement('h5')
+        description.textContent = item.description;
+
+        const price = document.createElement('p');
+        price.textContent = `Preço: R$ ${item.price.toFixed(2)}`;
+
+        const quantity = document.createElement('p');
+        const decreaseBtn = document.createElement('button');
+        const quantidade = document.createElement('span')
+        quantidade.textContent = 'Quantidade: '
+        decreaseBtn.textContent = '-';
+        decreaseBtn.className = 'text-red-700';
+        decreaseBtn.onclick = () => decreaseQuantity(item.id);
+
+        const quantitySpan = document.createElement('span');
+        quantitySpan.textContent = ` ${item.quantity} `;
+
+        const increaseBtn = document.createElement('button');
+        increaseBtn.textContent = '+';
+        increaseBtn.className = 'text-green-900'
+        increaseBtn.onclick = () => increaseQuantity(item.id);
+
+        quantity.appendChild(quantidade);
+        quantity.appendChild(decreaseBtn);
+        quantity.appendChild(quantitySpan);
+        quantity.appendChild(increaseBtn);
+        
+
+        const subtotal = document.createElement('p');
+        subtotal.textContent = `Subtotal: R$ ${itemTotal.toFixed(2)}`;
+        subtotal.className ='font-bold'
+
+        // Adiciona os elementos criados ao item do carrinho
+        details.appendChild(name);
+        details.appendChild(description);
+        details.appendChild(price);
+        details.appendChild(quantity);
+        details.appendChild(subtotal);
+
+        cartItem.appendChild(img);
+        cartItem.appendChild(details);
+        cartItemsContainer.appendChild(cartItem);
+    });
+
+    document.getElementById('cartTotal').textContent = total.toFixed(2);
+}
+
+// Aumentar quantidade do item no carrinho
+function increaseQuantity(itemId) {
+    const item = cart.find(cartItem => cartItem.id === itemId);
+    if (item) {
+        item.quantity += 1;
+        updateCart();
+    }
+}
+
+// Diminuir quantidade do item no carrinho
+function decreaseQuantity(itemId) {
+    const item = cart.find(cartItem => cartItem.id === itemId);
+    if (item && item.quantity > 1) {
+        item.quantity -= 1;
+    } else {
+        cart = cart.filter(cartItem => cartItem.id !== itemId);
+    }
+    updateCart();
+}
+
+// Configura os botões de "adicionar ao carrinho"
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.addToCart').forEach(button => {
+        button.addEventListener('click', () => {
+            const itemId = parseInt(button.getAttribute('data-id'), 10);
+            addToCart(itemId);
+        });
+    });
+});
+  </script>
+</html>
