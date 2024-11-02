@@ -49,8 +49,8 @@
         </div>
 
         <!--Configuração para menu toggle-->
-
-        <div id="menu" class="flex-col gap-2 hidden">
+        
+        <div id="menu" class="flex-col gap-2 hidden sm:hidden">
             <ul class="flex flex-col gap-2">
                 <a class="hover:scale-110 mt-2 transitio" href="#burguers-area">Hambúrguers</a>
                 <a class="hover:scale-110" href="#drinks-area">Bebidas</a>
@@ -75,8 +75,9 @@
 
     <!--Modal do Carrinho-->
 
-    <div class="w-[60%] max-sm:w-[80%] mx-auto mt-5">
-        <div id="cartModal" class="cart-modal bg-white border border-black hidden">
+    <div class="fixed w-[100%] overflow-y-auto">
+    <div class="w-[60%] max-sm:w-[80%] mx-auto mt-5 ">
+        <div id="cartModal" class="cart-modal bg-white border border-black rounded hidden" style="max-height: 70vh; overflow-y: auto;">
             <div class="cart-content flex flex-col justify-center">
                 <div class="flex mx-auto mr-5 ml-5 justify-between">
                     <div class="flex ">
@@ -92,7 +93,7 @@
             </div>
         </div>
     </div>
-
+  </div>
 
     <main class="w-[90%] mx-auto">
       <div id="burguers-area" class="flex items-center justify-center mt-5 text-center">

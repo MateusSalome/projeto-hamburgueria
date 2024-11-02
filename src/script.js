@@ -29,13 +29,13 @@ function renderBurgers() {
     burguerJson.forEach(burguer => {
         // Cria o contêiner principal
         const burguerItem = document.createElement('div');
-        burguerItem.className = 'p-4 rounded-lg shadow-md flex flex-col items-center text-center border border-black mb-5';
+        burguerItem.className = 'p-4 rounded-lg shadow-md flex flex-col items-center text-center border border-black mb-5 rounded';
 
         // Imagem do hambúrguer
         const img = document.createElement('img');
         img.src = burguer.img;
         img.alt = burguer.name;
-        img.className = 'w-64 h-auto object-cover rounded-2xl mb-4 mt-5 ';
+        img.className = 'w-64 h-auto object-cover rounded-2xl mb-4 mt-5';
         burguerItem.appendChild(img);
 
         // Nome do hambúrguer
