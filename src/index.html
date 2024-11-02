@@ -77,7 +77,7 @@
 
     <div class="fixed w-[100%] overflow-y-auto">
     <div class="w-[60%] max-sm:w-[80%] mx-auto mt-5 ">
-        <div id="cartModal" class="cart-modal bg-white border border-black rounded hidden" style="max-height: 70vh; overflow-y: auto;">
+        <div id="cartModal" class="cart-modal bg-white border border-black rounded-lg hidden" style="max-height: 70vh; overflow-y: auto;">
             <div class="cart-content flex flex-col justify-center">
                 <div class="flex mx-auto mr-5 ml-5 justify-between">
                     <div class="flex ">
@@ -174,9 +174,9 @@ links.forEach(link => {
   link.addEventListener('click', (e) => {
     e.preventDefault();
 
-    const targetId = link.getAttribute('href').substring(1);   
+    const targetId = link.getAttribute('href').substring(1);
 
-    const targetElement = document.getElementById(targetId);   
+    const targetElement = document.getElementById(targetId); 
 
 
     // Calcular o ponto central da seção
@@ -251,7 +251,7 @@ function updateCart() {
 
         // Criação dos elementos para o item do carrinho
         const cartItem = document.createElement('div');
-        cartItem.className = 'cart-item flex w-[100%] border border-black px-4 py-4 mb-2';
+        cartItem.className = 'cart-item flex w-[100%] border border-black px-4 py-4 mb-2 rounded items-center';
 
         const img = document.createElement('img');
         img.src = item.img;
